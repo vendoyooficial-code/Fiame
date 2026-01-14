@@ -1,0 +1,3 @@
+Fiame utiliza Google AdMob para mostrar anuncios.
+Al usar la aplicación, aceptas que Google recopile datos para personalizar anuncios según su política de privacidad: https://policies.google.com/privacy.
+Puedes optar por no recibir anuncios personalizados desde la configuración de tu dispositivo.
