@@ -3,76 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Términos y Condiciones - Fiame</title>
+    <title>Fiame | Términos y Condiciones de Servicio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; max-width: 900px; margin: 0 auto; padding: 20px; color: #333; }
-        h1, h2, h3 { color: #0056b3; }
-        .logo { text-align: center; margin-bottom: 20px; }
-        .logo img { width: 120px; }
-        .last-updated { font-style: italic; color: #666; }
-        a { color: #0056b3; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        ol { margin-left: 20px; }
+        :root {
+            --primary-green: #1a5d2c;
+            --app-bg: #f4f7f6;
+            --white: #ffffff;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --accent-emerald: #10b981;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--app-bg);
+            color: var(--text-main);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estética coherente con el Header de la App */
+        .header-section {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 70px 20px;
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+        .logo-container img {
+            width: 90px;
+            border-radius: 22px;
+            margin-bottom: 20px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+        }
+
+        .main-content {
+            max-width: 900px;
+            margin: -50px auto 80px;
+            background: var(--white);
+            padding: 60px;
+            border-radius: 35px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: 10px; }
+        .update-tag { color: #a7f3d0; font-size: 0.9rem; opacity: 0.9; }
+
+        h2 { 
+            color: var(--primary-green);
+            font-size: 1.5rem;
+            margin-top: 45px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: "";
+            width: 6px;
+            height: 24px;
+            background: var(--accent-emerald);
+            border-radius: 10px;
+        }
+
+        p, li { color: var(--text-muted); font-size: 1rem; margin-bottom: 15px; }
+
+        .legal-notice {
+            background: #fef2f2;
+            border: 1px solid #fee2e2;
+            padding: 25px;
+            border-radius: 20px;
+            color: #991b1b;
+            font-weight: 500;
+            margin: 30px 0;
+        }
+
+        .definition-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .definition-item {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .definition-item b { color: var(--primary-green); }
+
+        footer {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #f1f5f9;
+            margin-top: 50px;
+        }
+
+        .contact-pill {
+            display: inline-block;
+            background: var(--primary-green);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .contact-pill:hover { background: var(--accent-emerald); transform: translateY(-3px); }
+
+        @media (max-width: 768px) {
+            .main-content { padding: 30px; margin: -30px 15px 50px; }
+            .definition-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 1.8rem; }
+        }
     </style>
 </head>
 <body>
-    <div class="logo">
-        <img src="logo.png" alt="Logo de Fiame">
-    </div>
-    <h1>Términos y Condiciones de Uso de Fiame</h1>
-    <p class="last-updated">Última actualización: 14 de enero de 2026</p>
 
-    <p>Bienvenido a Fiame. Al descargar, instalar o usar nuestra aplicación, aceptas estos Términos y Condiciones. Si no estás de acuerdo, no uses la app.</p>
+    <header class="header-section">
+        <div class="logo-container">
+            <img src="logo.png" alt="Fiame Logo">
+        </div>
+        <h1>Términos de Servicio</h1>
+        <p class="update-tag">Vigente desde el 14 de enero de 2026</p>
+    </header>
 
-    <h2>1. Aceptación de los Términos</h2>
-    <p>Al usar Fiame, aceptas cumplir con estos términos y nuestra <a href="politica-de-privacidad.html">Política de Privacidad</a>.</p>
+    <main class="main-content">
+        
+        <div class="legal-notice">
+            IMPORTANTE: Lea atentamente estos términos. El uso de la aplicación Fiame implica la aceptación total e incondicional de cada una de las cláusulas aquí presentadas.
+        </div>
 
-    <h2>2. Licencia de Uso</h2>
-    <p>Te otorgamos una licencia limitada, no exclusiva, revocable y no transferible para usar la app <strong>únicamente con fines personales y no comerciales</strong>.</p>
+        <h2>1. Definiciones</h2>
+        <div class="definition-grid">
+            <div class="definition-item">
+                <b>La Aplicación:</b> Se refiere al software móvil "Fiame", incluyendo todas sus herramientas de ventas, inventario y reportes.
+            </div>
+            <div class="definition-item">
+                <b>Usuario:</b> Persona física o jurídica que utiliza las funciones de la App para la gestión de su negocio.
+            </div>
+            <div class="definition-item">
+                <b>Datos de Negocio:</b> Registros de ventas, montos de dinero, listas de clientes y productos ingresados por el Usuario.
+            </div>
+            <div class="definition-item">
+                <b>Soporte:</b> Servicio de asistencia técnica brindado a través de los canales oficiales de Fiame.
+            </div>
+        </div>
 
-    <h2>3. Restricciones</h2>
-    <p>No puedes:</p>
-    <ol>
-        <li>Copiar, modificar o distribuir la app sin nuestro consentimiento.</li>
-        <li>Usar la app para actividades ilegales o fraudulentas.</li>
-        <li>Interferir con el funcionamiento de la app o sus servidores.</li>
-        <li>Manipular los anuncios o el sistema de monetización.</li>
-    </ol>
+        <h2>2. Propósito y Alcance del Servicio</h2>
+        <p>Fiame proporciona una plataforma técnica diseñada para facilitar la administración comercial. El servicio incluye, pero no se limita a:</p>
+        <ul>
+            <li>Registro y seguimiento de ventas en tiempo real.</li>
+            <li>Generación de reportes financieros basados en los datos ingresados.</li>
+            <li>Gestión de carteras de clientes y catálogos de productos.</li>
+        </ul>
 
-    <h2>4. Propiedad Intelectual</h2>
-    <p>Todos los derechos de propiedad intelectual de Fiame (código, diseño, logos) son de nuestra propiedad o de nuestros licenciantes. No puedes usarlos sin autorización.</p>
+        <h2>3. Licencia de Software</h2>
+        <p>Fiame otorga al Usuario una licencia de uso personal, intransferible y no exclusiva. Esta licencia no otorga derechos sobre el código fuente, la propiedad intelectual o el diseño de la interfaz. Queda estrictamente prohibida la ingeniería inversa, descompilación o distribución no autorizada de la App.</p>
 
-    <h2>5. Anuncios</h2>
-    <p>Fiame muestra anuncios de terceros. No controlamos el contenido de estos anuncios, y no nos hacemos responsables de ellos. Tu interacción con los anuncios está sujeta a los términos del anunciante.</p>
+        <h2>4. Responsabilidad sobre la Exactitud de Datos</h2>
+        <p>Fiame es una herramienta de procesamiento. <strong>El Usuario es el único responsable de la veracidad y exactitud de los montos, precios y datos ingresados.</strong></p>
+        <ul>
+            <li>Fiame no se responsabiliza por pérdidas financieras derivadas de errores en el ingreso de datos por parte del Usuario.</li>
+            <li>Los reportes generados son para fines informativos y de gestión interna; no constituyen asesoramiento contable ni fiscal legalmente vinculante.</li>
+        </ul>
 
-    <h2>6. Responsabilidades del Usuario</h2>
-    <p>Eres responsable de:</p>
-    <ul>
-        <li>Mantener la confidencialidad de tu cuenta (si aplica).</li>
-        <li>Usar la app de acuerdo con estas condiciones y las leyes aplicables.</li>
-    </ul>
+        <h2>5. Gestión de Datos y Almacenamiento</h2>
+        <p>Los datos de ventas y clientes se almacenan localmente en el dispositivo del Usuario. Es responsabilidad del Usuario:</p>
+        <ol>
+            <li>Realizar copias de seguridad periódicas mediante las funciones de la App.</li>
+            <li>Asegurar el dispositivo contra accesos no autorizados.</li>
+            <li>Mantener actualizada la App para garantizar el correcto funcionamiento de la base de datos local.</li>
+        </ol>
 
-    <h2>7. Limitación de Responsabilidad</h2>
-    <p>Fiame se proporciona "tal cual". No garantizamos que:</p>
-    <ul>
-        <li>La app esté libre de errores o interrupciones.</li>
-        <li>Los resultados obtenidos sean precisos o confiables.</li>
-    </ul>
-    <p>No nos hacemos responsables por daños indirectos, incidentales o especiales derivados del uso de la app.</p>
+        <h2>6. Uso de Publicidad (Google AdMob)</h2>
+        <p>El Usuario reconoce que la versión gratuita de Fiame se financia mediante publicidad gestionada por terceros. Fiame no tiene control directo sobre el contenido específico de los anuncios mostrados por Google AdMob y no se hace responsable por las ofertas o servicios promocionados en dichos espacios.</p>
 
-    <h2>8. Indemnización</h2>
-    <p>Aceptas indemnizar a Fiame y a sus afiliados por cualquier reclamo derivado de tu incumplimiento de estos términos.</p>
+        <h2>7. Limitación de Garantía</h2>
+        <p>Fiame se entrega "TAL CUAL" (As-Is). No garantizamos que el servicio sea ininterrumpido o libre de errores humanos, técnicos o de servidor. No nos hacemos responsables por la pérdida de datos causada por fallos en el sistema operativo del dispositivo del Usuario o daños físicos al hardware.</p>
 
-    <h2>9. Modificaciones</h2>
-    <p>Nos reservamos el derecho de modificar estos términos en cualquier momento. Te notificaremos sobre cambios significativos. El uso continuo de la app constituye aceptación de los nuevos términos.</p>
+        <h2>8. Jurisdicción y Resolución de Conflictos</h2>
+        <p>Para cualquier controversia derivada del uso de la Aplicación, las partes se someten a la jurisdicción de los tribunales ordinarios de la Ciudad Autónoma de Buenos Aires, República Argentina, renunciando a cualquier otro fuero o jurisdicción que pudiera corresponderles.</p>
 
-    <h2>10. Terminación</h2>
-    <p>Podemos suspender o terminar tu acceso a la app en cualquier momento, sin previo aviso, si violas estos términos.</p>
+        <footer>
+            <p>¿Tienes dudas sobre nuestros términos legales?</p>
+            <br>
+            <a href="mailto:vendoyooficial@gmail.com" class="contact-pill">Contactar al Departamento Legal</a>
+            <p style="font-size: 0.7rem; margin-top: 20px;">Fiame © 2026 - Todos los derechos reservados.</p>
+        </footer>
 
-    <h2>11. Ley Aplicable</h2>
-    <p>Estos términos se rigen por las leyes de la República Argentina. Cualquier disputa se resolverá en los tribunales de Buenos Aires.</p>
+    </main>
 
-    <h2>12. Contacto</h2>
-    <p>Para consultas, escribe a <a href="mailto:vendoyooficial@gmail.com">vendoyooficial@gmail.com</a>.</p>
 </body>
 </html>
